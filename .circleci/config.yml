@@ -6,7 +6,8 @@ jobs:
   build_and_test: # this can be any name you choose
     executor: python/default
     steps:
-      - checkout
+      - checkout:
+          method: full
       - python/install-packages:
           pkg-manager: pip
       - run:
