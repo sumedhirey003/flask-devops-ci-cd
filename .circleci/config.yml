@@ -7,7 +7,7 @@ jobs:
     executor: python/default
     steps:
       - checkout:
-          method: full
+            method: full
       - python/install-packages:
           pkg-manager: pip
       - run:
