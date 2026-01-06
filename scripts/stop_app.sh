@@ -1,13 +1,14 @@
 #!/bin/bash
-set -e 
+set -e
 
-echo "Stopping existing Flask app (if any) ....."
+echo "Stopping existing Flask app (if any)..."
 
-PID=$(pgrep -f "python app/main.py" || true)
+PID=$(pgrep -f "flask")
 
-if [ -n "$PID"]; then
-    kill $PID
-    echo "Stopped process $PID"
-else 
-    echo "No running app found"
+if [ -z "$PID" ]; then
+  echo "No running Flask app found. Skipping stop."
+  exit 0
 fi
+
+echo "Found Flask process with PID $PID. Stopping..."
+kill $PID
