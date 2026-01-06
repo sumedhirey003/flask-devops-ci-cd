@@ -3,7 +3,7 @@ set -e
 
 echo "Stopping existing Flask app (if any)..."
 
-PID=$(pgrep -f "flask")
+PID=$(pgrep -f "flask" || true)
 
 if [ -z "$PID" ]; then
   echo "No running Flask app found. Skipping stop."
