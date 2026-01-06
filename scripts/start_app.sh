@@ -1,20 +1,12 @@
 #!/bin/bash
 set -e
 
-echo "Install Dependencies.sh...."
+echo "Starting Flask app..."
 
-APP_DIR="/home/ec2-user/flask-app"
-mkdir -p "$APP_DIR"
-cd "$APP_DIR"
+cd /home/ec2-user/flask-app
 
-echo "Python version:"
-python3 --version
+pkill -f "python.*main.py" || true
 
-echo "Ensuring pip is installed..."
-python3 -m ensurepip --upgrade
+nohup python3 app/main.py > app.log 2>&1 &
 
-echo "Upgrading pip..."
-python3 -m pip install --user --upgrade pip
-
-echo "Installing application dependencies..."
-python3 -m pip install --user -r requirements.txt
+echo "Flask app started"
