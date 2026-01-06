@@ -11,6 +11,8 @@ phases:
 
   pre_build:
     commands:
+      - echo "Setting PYTHONPATH"
+      - export PYTHONPATH=$PYTHONPATH:$(pwd)
       - echo "Running tests"
       - pytest -v
 
