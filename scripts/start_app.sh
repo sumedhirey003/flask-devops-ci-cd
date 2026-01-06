@@ -1,9 +1,11 @@
 #!/bin/bash
 set -e
 
-echo "Starting Flask app...."
+echo "Starting Flask app..."
 
-cd /home/ec2-user/flask-app
-source venv/bin/activate
+APP_DIR="/home/ec2-user/flask-app"
+cd "$APP_DIR"
 
-nohup python app/main.py > app.log 2>&1 &
+export PATH=$PATH:/home/ec2-user/.local/bin
+
+nohup python3 app/main.py > app.log 2>&1 &
