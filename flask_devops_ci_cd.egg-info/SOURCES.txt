@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+app/__init__.py
+app/main.py
+flask_devops_ci_cd.egg-info/PKG-INFO
+flask_devops_ci_cd.egg-info/SOURCES.txt
+flask_devops_ci_cd.egg-info/dependency_links.txt
+flask_devops_ci_cd.egg-info/requires.txt
+flask_devops_ci_cd.egg-info/top_level.txt
+tests/test_app.py
