@@ -5,15 +5,22 @@ echo "Install Dependencies.sh...."
 
 APP_DIR="/home/ec2-user/flask-app"
 
-cd $APP_DIR
+# Ensure app directory exists
+mkdir -p "$APP_DIR"
 
-# Create venv only if it does not exist
-if [ ! -d "venv" ]; then
+cd "$APP_DIR"
+
+# Ensure Python is available
+python3 --version
+
+# Create virtual environment if missing
+if [ ! -d "$APP_DIR/venv" ]; then
   echo "Creating virtual environment..."
-  python3 -m venv venv
+  python3 -m venv "$APP_DIR/venv"
 fi
 
-source venv/bin/activate
+# Activate venv
+source "$APP_DIR/venv/bin/activate"
 
 pip install --upgrade pip
 pip install -r requirements.txt
