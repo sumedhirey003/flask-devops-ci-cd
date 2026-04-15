@@ -102,17 +102,17 @@ python app/main.py
 ```
 
 ## Output
-![Pipeline](img/pipeline.png)
+![Pipeline](img/Pipeline.png)
 *CodePipeline showing successful Source → Build → Deploy stages.*
 
-![App Home](img/app-home.png)
+![App Home](img/APP-Home.png)
 *Flask application successfully deployed and accessible via EC2 public IP on port 5000.*
 
-![App Health](img/health.png)
+![App Health](img/APP-Health.png)
 *Health check endpoint verifying application availability and returning HTTP 200 OK.*
 
-![Security Group](img/EC2-security-group.png)
+![Security Group](img/EC2-security-groups.png)
 *Inbound rules configured to allow HTTP (80), application port (5000), and restricted SSH access.*
 
-![CodeDeploy](img/codedeploy.png)
+![CodeDeploy](img/CodeDeploy.png)
 *Successful deployment using AWS CodeDeploy with all lifecycle events completed.*
