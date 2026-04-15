@@ -100,3 +100,19 @@ Scripts were rewritten to handle first-time and repeat deployments safely.
 pip install -r requirements.txt
 python app/main.py
 ```
+
+## Output
+![Pipeline](img/pipeline.png)
+*CodePipeline showing successful Source → Build → Deploy stages.*
+
+![App Home](img/app-home.png)
+*Flask application successfully deployed and accessible via EC2 public IP on port 5000.*
+
+![App Health](img/health.png)
+*Health check endpoint verifying application availability and returning HTTP 200 OK.*
+
+![Security Group](img/EC2-security-group.png)
+*Inbound rules configured to allow HTTP (80), application port (5000), and restricted SSH access.*
+
+![CodeDeploy](img/codedeploy.png)
+*Successful deployment using AWS CodeDeploy with all lifecycle events completed.*
