@@ -13,6 +13,8 @@ The goal of this project was not just deployment, but understanding real-world D
 - Python environment bootstrapping
 - Debugging “green pipelines but broken apps”
 
+This project simulates a real-world production deployment pipeline, focusing on reliability, automation, and debugging cloud-native issues.
+
 ---
 
 ## Architecture
